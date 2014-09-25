@@ -172,9 +172,9 @@ class SageOne {
                 
             case 'oauth':
                 $curl_options = $curl_options + array(
-                    CURLOPT_HTTPHEADER => array('Accept: application/json'),
-                    CURLOPT_POST       => 1,
-                    CURLOPT_POSTFIELDS => $data
+                    // application/json is unsupported for now
+                    // recommended to use application/x-www-form-urlencoded header
+                    CURLOPT_HTTPHEADER => array('Content-Type: application/x-www-form-urlencoded'),
                 );
                 break;
         }
