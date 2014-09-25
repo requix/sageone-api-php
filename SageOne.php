@@ -96,6 +96,15 @@ class SageOne {
         $result = $this->post('/sales_invoices/'.$sales_invoice_id.'/payments', $data);
         return $result;
     }
+
+    public function createProduct($params){
+        
+        // Wrap params in array
+        $data = array("product" => $params);
+        
+        $result = $this->post('/products', $data);
+        return $result;
+    }
     
     public function getTaxRates(){
         
