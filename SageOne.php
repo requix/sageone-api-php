@@ -127,7 +127,7 @@ class SageOne {
         
         // Data (if set) has to be array and then converted to json
         if($data){
-            $data = json_encode($data);
+            $data = json_encode($data, JSON_FORCE_OBJECT);
         }
         
         $ch = curl_init();
