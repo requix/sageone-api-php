@@ -49,7 +49,8 @@ class SageOne {
             'client_secret' => $this->clientSecret,
             'code' => $code,
             'grant_type' => 'authorization_code',
-            'redirect_uri' => $callback
+            'redirect_uri' => $callback,
+            'scope' => 'full_access' // required to create contacts, invoices etc.
         );
         
         $result = $this->call('', 'oauth', $params);
