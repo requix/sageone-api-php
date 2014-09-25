@@ -15,7 +15,7 @@ class SageOne {
     private $clientSecret;
     
     private $oAuthAuthoriseURL = 'https://app.sageone.com/oauth/authorize';
-    private $oAuthAccessTokenURL = 'https://app.sageone.com/oauth/token';
+    private $oAuthAccessTokenURL = 'http://app.sageone.com/oauth/token';
     private $accessToken;
     
     private $apiUrl = 'https://app.sageone.com/api/v1';
